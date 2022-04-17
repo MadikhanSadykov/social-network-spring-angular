@@ -1,7 +1,7 @@
-package com.madikhan.entity;
+package com.madikhan.app.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.madikhan.entity.enums.Roles;
+import com.madikhan.app.entity.enums.Roles;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -37,7 +37,7 @@ public class User {
 
     @ElementCollection(targetClass = Roles.class)
     @CollectionTable(name = "user_role",
-    joinColumns = @JoinColumn(referencedColumnName = "user_id"))
+    joinColumns = @JoinColumn(name = "user_id"))
     private Set<Roles> role = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user", orphanRemoval = true)

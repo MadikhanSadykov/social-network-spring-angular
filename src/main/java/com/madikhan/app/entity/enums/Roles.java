@@ -1,4 +1,4 @@
-package com.madikhan.entity.enums;
+package com.madikhan.app.entity.enums;
 
 public enum Roles {
     ROLE_USER,

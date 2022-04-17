@@ -1,4 +1,4 @@
-package com.madikhan.entity;
+package com.madikhan.app.entity;
 
 import lombok.Data;
 
