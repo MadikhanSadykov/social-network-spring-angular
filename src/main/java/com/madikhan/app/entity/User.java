@@ -39,7 +39,7 @@ public class User implements UserDetails {
     @ElementCollection(targetClass = Roles.class)
     @CollectionTable(name = "user_role",
     joinColumns = @JoinColumn(name = "user_id"))
-    private Set<Roles> role = new HashSet<>();
+    private Set<Roles> roles = new HashSet<>();
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user", orphanRemoval = true)
     private List<Post> posts = new ArrayList<>();
